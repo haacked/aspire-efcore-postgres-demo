@@ -1,9 +1,11 @@
+using AspireDemo.Web;
 using AspireDemo.Web.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add service defaults & Aspire components.
 builder.AddServiceDefaults();
+builder.AddNpgsqlDbContext<DemoDbContext>("postgresdb");
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
