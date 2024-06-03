@@ -10,7 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AspireDemo.ApiService\AspireDemo.ApiService.csproj" />
     <ProjectReference Include="..\AspireDemo.Web\AspireDemo.Web.csproj" />
   </ItemGroup>
 

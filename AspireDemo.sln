@@ -6,8 +6,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireDemo.AppHost", "Aspir
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireDemo.ServiceDefaults", "AspireDemo.ServiceDefaults\AspireDemo.ServiceDefaults.csproj", "{9EA193E5-77ED-418C-B0A2-6BCF2D30A480}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireDemo.ApiService", "AspireDemo.ApiService\AspireDemo.ApiService.csproj", "{64CD7901-0FB5-4762-A0BF-B3E138E2C85E}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireDemo.Web", "AspireDemo.Web\AspireDemo.Web.csproj", "{AF1D93E9-CF7E-4101-BA32-7E1F601D5B50}"
 EndProject
 Global
@@ -24,10 +22,6 @@ Global
 		{9EA193E5-77ED-418C-B0A2-6BCF2D30A480}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EA193E5-77ED-418C-B0A2-6BCF2D30A480}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EA193E5-77ED-418C-B0A2-6BCF2D30A480}.Release|Any CPU.Build.0 = Release|Any CPU
-		{64CD7901-0FB5-4762-A0BF-B3E138E2C85E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{64CD7901-0FB5-4762-A0BF-B3E138E2C85E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{64CD7901-0FB5-4762-A0BF-B3E138E2C85E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{64CD7901-0FB5-4762-A0BF-B3E138E2C85E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AF1D93E9-CF7E-4101-BA32-7E1F601D5B50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AF1D93E9-CF7E-4101-BA32-7E1F601D5B50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF1D93E9-CF7E-4101-BA32-7E1F601D5B50}.Release|Any CPU.ActiveCfg = Release|Any CPU
