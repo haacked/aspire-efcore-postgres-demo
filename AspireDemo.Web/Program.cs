@@ -1,15 +1,24 @@
 using AspireDemo.Web;
 using AspireDemo.Web.Components;
+using AspireDemo.Web.Startup;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add service defaults & Aspire components.
 builder.AddServiceDefaults();
-builder.AddNpgsqlDbContext<DemoDbContext>("postgresdb");
+builder.AddNpgsqlDbContext<DemoDbContext>("postgresdb", null,
+    optionsBuilder => optionsBuilder.UseNpgsql(npgsqlBuilder =>
+        npgsqlBuilder.MigrationsAssembly(typeof(Program).Assembly.GetName().Name)));
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services.AddSingleton<DemoDbInitializer>();
+builder.Services.AddHostedService(sp => sp.GetRequiredService<DemoDbInitializer>());
+builder.Services.AddHealthChecks()
+    .AddCheck<DemoDbInitializerHealthCheck>("DbInitializer", null);
 
 builder.Services.AddOutputCache();
 
