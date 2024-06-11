@@ -1,7 +1,25 @@
 ﻿@page "/"
+@using Microsoft.EntityFrameworkCore
+@inject DemoDbContext db
 
 <PageTitle>Home</PageTitle>
 
 <h1>Hello, world!</h1>
 
 Welcome to your new app.
+
+<h3>Users</h3>
+
+@foreach (var user in _users)
+{
+    <p>@user.Name</p>
+}
+
+@code {
+    ICollection<User> _users = new List<User>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        _users = await db.Users.ToListAsync();
+    }
+}
