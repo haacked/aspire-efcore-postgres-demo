@@ -7,9 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add service defaults & Aspire components.
 builder.AddServiceDefaults();
-builder.AddNpgsqlDbContext<DemoDbContext>("postgresdb", null,
-    optionsBuilder => optionsBuilder.UseNpgsql(npgsqlBuilder =>
-        npgsqlBuilder.MigrationsAssembly(typeof(Program).Assembly.GetName().Name)));
+builder.AddNpgsqlDbContext<DemoDbContext>("postgresdb");
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
